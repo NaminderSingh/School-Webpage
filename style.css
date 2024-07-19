@@ -8,8 +8,29 @@
     box-sizing: border-box;
 }
 
-
-
+.logo-box{
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0px 0px 10px black;
+}
+.logo img{
+    height: 70px;
+    
+}
+.logo-text{
+    color: rgb(68, 68, 255);
+    font-size: 13px;
+    line-height: 25px;
+    font-weight: 600;
+}
 /* navbar */
 .navbar {
     display: flex;
@@ -24,17 +45,22 @@
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     margin-left: 0px;
     font-weight: 200;
-    margin: auto;
+    width: 50%;
 
-
+}
+.nav2{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: 200;
+    gap: 20px;
 }
 
 .btn {
     font-size: 1.2rem;
-    padding: 13px;
 
 }
 
@@ -45,7 +71,7 @@
 
 .navbar-btn {
     margin: 0px;
-    padding: 15px;
+    padding: 25px 20px;
     border-bottom: 2px solid transparent;
 
 }
@@ -228,6 +254,9 @@
 
 /* index visual tour of school */
 
+.phone{
+    display: none;
+}
 .tour {
     background: transparent linear-gradient(107deg,
             rgba(220, 118, 3, 0.07) 0%,
@@ -237,13 +266,18 @@
 }
 
 .tour-images {
-    display: grid;
+    display: flex;
     margin: auto;
     gap: 30px;
     margin-top: 60px;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 1fr 3fr 3fr 3fr 1fr;
+    /* grid-template-columns: 1fr 3fr 3fr 3fr 1fr; */
+}
+.phoneimg{
+    animation-name: rightimg;
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
 }
 
 .tour-images button {
@@ -263,7 +297,7 @@
     from {
         opacity: 1;
         position: relative;
-        left: 150px;
+        left: 100px;
     }
 
     to {
@@ -305,6 +339,7 @@ align-items: center;
     gap: 80px;
     flex-wrap: wrap;
 align-items: center;
+justify-content: center;
 margin-top: 40px;
 }
 .info-inner{
@@ -391,20 +426,24 @@ margin-top: 40px;
     .nav {
         justify-content: space-between;
     }
-
+    .nav2{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        font-weight: 200;
+        gap: 10px;
+    }
     .btn {
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding: 8px;
     }
 
     .navbar-btn {
-        padding: 5px;
+        padding: 15px 5px;
     }
-
-    .navbar h1 {
-        font-size: 30px;
-    }
-
+.nav-hid{
+    display: none;
+}
     .icon {
         width: 150px;
     }
@@ -477,26 +516,46 @@ margin-top: 40px;
         padding: 15px;
 
     }
-
+.desktop{
+    display: none;
+}
+.phone{
+    display: block;
+}
     .tour-images {
-        gap: 10px;
         margin-top: 30px;
-        grid-template-columns: 1fr 4fr 4fr 4fr 1fr;
+        grid-template-columns: 1fr 4fr 1fr;
     }
 
     .tour-images>img {
         border-radius: 5px;
         box-shadow: 0px 0px 5px gray;
-        width: 115px;
-        height: 100px;
+        width: 200px;
+        height: 170px;
         object-fit: cover;
     }
 
     .arrows {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
     }
-
+    .info-outer{
+ gap: 20px;
+    }
+    .info-inner{
+        width: 100px;
+        height: 100px;
+gap: 10px;
+    }
+    .info-inner img{
+        height: 30px;
+    }
+    .info-inner a{
+        font-size: 12px;
+    }
+    .info-title{
+text-align: center;
+    }
 }
 
 /* address.html starts */
@@ -636,8 +695,7 @@ margin-top: 40px;
 
     .words {
         display: flex;
-        flex-wrap: wrap;
-        max-width: 50vw;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -840,13 +898,14 @@ margin-top: 40px;
     align-items: center;
 }
 
-
-
-
 @media only screen and (max-width:1024px) {
+    .quick-links{
+        gap: 20px;
+    }
     .quick {
         padding: 8px;
         font-size: 12px;
+        text-align: center;
         border-radius: 10px;
     }
 
